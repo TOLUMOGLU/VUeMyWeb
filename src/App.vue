@@ -1,30 +1,39 @@
 <template>
   <v-app>
     <HeaderComponent @navigate="setActiveSection" />
+
     <section
       id="about-me"
       v-show="activeSection === 'about-me'"
-      style="min-height: 600px; padding: 40px;">
+      class="full-width-section black-bg"
+    >
       <AboutMe />
     </section>
+
     <section
       id="resume"
       v-show="activeSection === 'resume'"
-      style="min-height: 600px; padding: 40px;">
+      class="full-width-section"
+    >
       <AboutMe />
     </section>
+
     <section
       id="projects"
       v-show="activeSection === 'projects'"
-      style="min-height: 600px; padding: 40px;">
+      class="full-width-section"
+    >
       <AboutMe />
     </section>
+
     <section
       id="contact"
       v-show="activeSection === 'contact'"
-      style="min-height: 600px; padding: 40px;">
+      class="full-width-section"
+    >
       <AboutMe />
     </section>
+
     <FooterComp />
   </v-app>
 </template>
@@ -33,7 +42,6 @@
 import HeaderComponent from './components/Header.vue'
 import AboutMe from './components/AboutMe.vue'
 import FooterComp from './components/Footer.vue'
-
 
 export default {
   name: 'App',
@@ -44,15 +52,13 @@ export default {
   },
   data() {
     return {
-      activeSection: 'about-me'  // default görünür bölüm
+      activeSection: 'about-me'
     }
   },
   methods: {
     setActiveSection(section) {
       this.activeSection = section
-      
-      // Scroll işlemi (smooth)
-      this.$nextTick(() => {  // DOM güncellenince scroll yap
+      this.$nextTick(() => {
         const el = document.getElementById(section)
         if (el) {
           el.scrollIntoView({ behavior: 'smooth' })
@@ -62,3 +68,20 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.full-width-section {
+  min-height: 600px;
+  padding: 40px;
+  width: 100vw;
+  margin: 0;
+  position: relative;
+  left: calc(-50vw + 50%);
+  box-sizing: border-box;
+}
+
+.black-bg {
+  background: linear-gradient(to right, #e6dace 33.33%, white 33.34%);
+  color: white;
+}
+</style>
