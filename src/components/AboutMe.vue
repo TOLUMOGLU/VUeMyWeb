@@ -6,6 +6,11 @@
         alt="Azime Tolumoğlu"
         class="profile-pic"
       />
+      <div class="name-wrapper">
+        <h2 class="name">Azime</h2>
+        <h2 class="name">Tolumoğlu</h2>
+      </div>
+
       <div class="social-icons">
         <a href="https://linkedin.com/in/azimetolumoglu" target="_blank" rel="noopener">
           <v-icon size="28">mdi-linkedin</v-icon>
@@ -21,7 +26,7 @@
     <div class="right-side">
       <h2>About Me</h2>
       <p>
-        Ben Azime Tolumoğlu, 
+        Ben Azime Tolumoğlu
       </p>
     </div>
   </div>
@@ -40,25 +45,38 @@ export default {
   display: flex;
   min-height: 400px;
   font-family: 'Poppins', sans-serif;
-  border-radius: 16px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
   width: 90%;
   max-width: 900px;
   margin: 60px auto;
   flex-wrap: wrap;
-  border-radius: 0; 
+  border-radius: 0;
 }
 
 .left-side {
-  background-color: #e6dace; 
+  background-color: #e6dace;
   flex: 1 1 33.33%;
   padding: 40px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+}
+
+.name-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: 600;
+  color: black;
+  margin: 0;
+  line-height: 1.2;
 }
 
 .profile-pic {
@@ -71,16 +89,17 @@ export default {
 
 .social-icons {
   display: flex;
-  gap: 24px;
+  gap: 20px;
+  margin-top: 16px;
 }
 
 .social-icons a {
-  color: #4a148c; 
+  color: #4a148c;
   transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-  color: #7e57c2; 
+  color: #7e57c2;
 }
 
 .right-side {
@@ -97,7 +116,7 @@ export default {
   font-weight: 600;
   margin-bottom: 16px;
   font-size: 28px;
-  color: #4a148c; 
+  color: #4a148c;
 }
 
 .right-side p {
@@ -110,10 +129,12 @@ export default {
   .about-container {
     flex-direction: column;
   }
+
   .left-side, .right-side {
     flex: 1 1 100%;
     padding: 20px;
   }
+
   .right-side {
     padding-top: 0;
   }
