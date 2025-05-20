@@ -25,18 +25,22 @@
       style="min-height: 600px; padding: 40px;">
       <AboutMe />
     </section>
+    <FooterComp />
   </v-app>
 </template>
 
 <script>
 import HeaderComponent from './components/Header.vue'
 import AboutMe from './components/AboutMe.vue'
+import FooterComp from './components/Footer.vue'
+
 
 export default {
   name: 'App',
   components: {
     HeaderComponent,
-    AboutMe
+    AboutMe,
+    FooterComp 
   },
   data() {
     return {

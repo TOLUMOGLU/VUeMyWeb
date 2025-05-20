@@ -21,7 +21,7 @@
     <div class="right-side">
       <h2>About Me</h2>
       <p>
-        Ben Azime Tolumoğlu, haftanın 6 günü çalışmaktan bıkmış bulunmaktayım.
+        Ben Azime Tolumoğlu, 
       </p>
     </div>
   </div>
