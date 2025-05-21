@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app class="app-root">
     <HeaderComponent @navigate="scrollToSection" />
 
     <section id="about-me" class="section">
@@ -17,6 +17,7 @@
     <section id="contact" class="section">
       <Contact />
     </section>
+
     <FooterComp />
   </v-app>
 </template>
@@ -50,10 +51,22 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
+html, body, #app, .v-application {
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.app-root {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 .section {
-  min-height: 100vh;
-  padding: 48px 24px;
-  box-sizing: border-box;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
 }
 </style>
