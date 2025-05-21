@@ -1,6 +1,9 @@
 <template>
-  <v-container fluid class="pa-0" style="height: 100vh; width: 100vw;">
-    <v-card elevation="6" class="overflow-hidden mx-auto pa-4" style="border-radius: 12px;" >
+  <v-container fluid class="pa-0" style="background-color: white; height: 100vh; width: 100vw; position: relative;">
+  <v-card
+    elevation="6"
+    class="overflow-hidden pa-4"
+    style="border-radius: 12px; position: absolute; top: 50%; left: 0; width: 100%; transform: translateY(-50%);">
      <form @submit.prevent="submit">
     <v-row class="d-flex justify-center pa-4" style="gap: 15px;">
       <v-text-field
