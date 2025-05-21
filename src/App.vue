@@ -1,39 +1,22 @@
 <template>
   <v-app>
-    <HeaderComponent @navigate="setActiveSection" />
+    <HeaderComponent @navigate="scrollToSection" />
 
-    <section
-      id="about-me"
-      v-show="activeSection === 'about-me'"
-      class="full-width-section black-bg"
-    >
+    <section id="about-me" class="section">
       <AboutMe />
     </section>
 
-    <section
-      id="resume"
-      v-show="activeSection === 'resume'"
-      class="full-width-section"
-    >
-      <AboutMe />
+    <section id="resume" class="section">
+      <Resume />
     </section>
 
-    <section
-      id="projects"
-      v-show="activeSection === 'projects'"
-      class="full-width-section"
-    >
-      <AboutMe />
+    <section id="projects" class="section">
+      <Projects />
     </section>
 
-    <section
-      id="contact"
-      v-show="activeSection === 'contact'"
-      class="full-width-section"
-    >
-      <AboutMe />
+    <section id="contact" class="section">
+      <Contact />
     </section>
-
     <FooterComp />
   </v-app>
 </template>
@@ -41,6 +24,9 @@
 <script>
 import HeaderComponent from './components/Header.vue'
 import AboutMe from './components/AboutMe.vue'
+import Resume from './components/Resume.vue'
+import Projects from './components/Projects.vue'
+import Contact from './components/Contact.vue'
 import FooterComp from './components/Footer.vue'
 
 export default {
@@ -48,40 +34,26 @@ export default {
   components: {
     HeaderComponent,
     AboutMe,
-    FooterComp 
-  },
-  data() {
-    return {
-      activeSection: 'about-me'
-    }
+    Resume,
+    Projects,
+    Contact,
+    FooterComp
   },
   methods: {
-    setActiveSection(section) {
-      this.activeSection = section
-      this.$nextTick(() => {
-        const el = document.getElementById(section)
-        if (el) {
-          el.scrollIntoView({ behavior: 'smooth' })
-        }
-      })
+    scrollToSection(sectionId) {
+      const el = document.getElementById(sectionId)
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' })
+      }
     }
   }
 }
 </script>
 
 <style scoped>
-.full-width-section {
-  min-height: 600px;
-  padding: 40px;
-  width: 100vw;
-  margin: 0;
-  position: relative;
-  left: calc(-50vw + 50%);
+.section {
+  min-height: 100vh;
+  padding: 48px 24px;
   box-sizing: border-box;
-}
-
-.black-bg {
-  background: linear-gradient(to right, #e6dace 33.33%, white 33.34%);
-  color: white;
 }
 </style>
