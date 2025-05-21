@@ -13,7 +13,7 @@
             <h2 class="text-black mb-0"><strong>Experience</strong></h2>
           </v-col>
           <v-col cols="12" md="6" class="d-flex justify-end">
-            <v-btn color="primary">DOWNLOAD CV</v-btn>
+            <v-btn color="primary" rounded>DOWNLOAD CV</v-btn>
           </v-col>
         </v-row>
       </v-col>
