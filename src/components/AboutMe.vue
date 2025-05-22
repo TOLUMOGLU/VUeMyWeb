@@ -41,8 +41,8 @@
               <h1 class="pa-2"><strong>Hello</strong></h1>
               <h2 class="mb-4 pa-2">Here's who I am & what I do</h2>
               <div class="d-flex justify-start mb-4 pa-2" style="gap: 20px;">
-                <v-btn color="primary" rounded>Resume</v-btn>
-                <v-btn rounded>Projects</v-btn>
+                <v-btn color="primary" href = "#resume" rounded>Resume</v-btn>
+                <v-btn href = "#projects" rounded>Projects</v-btn>
               </div>
               <p class="pa-2">
                 I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.
