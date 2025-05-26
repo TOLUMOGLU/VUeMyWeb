@@ -49,8 +49,6 @@
       <v-col cols="12">
         <v-text-field
           v-model="message"
-          :append-icon="message ? 'mdi-send' : 'mdi-microphone'"
-          :append-inner-icon="marker ? 'mdi-map-marker' : 'mdi-map-marker-off'"
           :prepend-icon="icon"
           clear-icon="mdi-close-circle"
           label="Message"
@@ -65,26 +63,11 @@
       </v-col>
     </v-row>
 
-    <v-checkbox 
-      v-model="state.checkbox"
-      :error-messages="v$.checkbox.$errors.map(e => e.$message)"
-      label="Do you agree?"
-      required
-      @blur="v$.checkbox.$touch"
-      @change="v$.checkbox.$touch"
-    ></v-checkbox>
-
     <v-btn 
       type="submit"
       class="me-4"
     >
       Submit
-    </v-btn>
-    <v-btn
-      type="button"
-      @click="clear"
-    >
-      Clear
     </v-btn>
   </form>
   </v-card>
@@ -169,10 +152,4 @@ async function submit() {
   }
 }
 
-function clear() {
-  v$.value.$reset()
-  Object.assign(state, initialState)
-  clearMessage()
-  resetIcon()
-}
 </script>
