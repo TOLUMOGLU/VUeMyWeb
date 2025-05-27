@@ -7,7 +7,7 @@
       <v-col cols="12" md="10" lg="8" class="mb-6">
         <v-row align="center">
           <v-col cols="12" md="6" class="d-flex justify-start">
-            <h2 class="text-white font-weight-bold text-h5">Experience</h2>
+            <h2 class="font-weight-bold text-h5" style="color: #F97316;">Experience</h2>
           </v-col>
           <v-col cols="12" md="6" class="d-flex justify-end">
             <v-btn
@@ -33,7 +33,7 @@
                   <h3 class="text-h6 font-weight-bold mb-2" style="color: #2e2e2e;">
                     2035 - Present
                   </h3>
-                  <div class="text-subtitle-1 font-weight-medium mb-1" style="color: #3f51b5;">
+                  <div class="text-subtitle-1 font-weight-medium mb-1" style="color: #F97316;">
                     Senior Software Engineerrr
                   </div>
                   <div class="text-subtitle-2 mb-1" style="color: #555;">
@@ -64,7 +64,7 @@
                   <h3 class="text-h6 font-weight-bold mb-2" style="color: #2e2e2e;">
                     2035 - Present
                   </h3>
-                  <div class="text-subtitle-1 font-weight-medium mb-1" style="color: #3f51b5;">
+                  <div class="text-subtitle-1 font-weight-medium mb-1" style="color: #F97316;">
                     Senior Software Enginee
                   </div>
                   <div class="text-subtitle-2 mb-1" style="color: #555;">
@@ -89,7 +89,7 @@
       <v-col cols="12" md="10" lg="8" class="mb-6">
         <v-row align="center">
           <v-col cols="12" md="6" class="d-flex justify-start">
-            <h2 class="text-white font-weight-bold text-h5">Education</h2>
+            <h2 class="font-weight-bold text-h5" style="color: #F97316;">Education</h2>
           </v-col>
         </v-row>
       </v-col>
@@ -131,7 +131,7 @@
           <v-card-text>
             <v-row>
               <v-col cols="12" md="6" class="text-left">
-                <h3 class="text-h6 font-weight-bold mb-2" style="color: #2e2e2e;">Professional Skillset</h3>
+                <h3 class="text-h6 font-weight-bold mb-2" style="color: #F97316;">Professional Skillset</h3>
                 <ul style="padding-left: 1rem; color: #444; font-size: 0.95rem; line-height: 1.6;">
                   <li>JavaScript, TypeScript, Python, C++</li>
                   <li>Vue.js, React, Node.js</li>
@@ -140,7 +140,7 @@
                 </ul>
               </v-col>
               <v-col cols="12" md="6" class="text-left">
-                <h3 class="text-h6 font-weight-bold mb-2" style="color: #2e2e2e;">Soft Skills</h3>
+                <h3 class="text-h6 font-weight-bold mb-2" style="color: #F97316;">Soft Skills</h3>
                 <ul style="padding-left: 1rem; color: #444; font-size: 0.95rem; line-height: 1.6;">
                   <li>Strong communication and team collaboration</li>
                   <li>Problem solving & critical thinking</li>
