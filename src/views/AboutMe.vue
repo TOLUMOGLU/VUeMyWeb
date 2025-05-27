@@ -2,8 +2,7 @@
   <v-container
     fluid
     class="pa-0 d-flex align-center justify-center"
-    style="background: linear-gradient(to right, white 33.3%, #1E3A8A 33.3%); min-height: 100vh;"
-  >
+    style="background: linear-gradient(to right, white 33.3%, #1E3A8A 33.3%); min-height: 100vh;">
     <v-col class="pa-12" cols="12" md="10" style="height: auto;">
       <v-row no-gutters style="height: 100%;">
         <v-col
