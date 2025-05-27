@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="pa-0" style="background-color: #B2C6D5; min-height: 100vh;">
+  <v-container fluid class="pa-0" style="background-color: white; min-height: 100vh;">
     <v-row justify="center" class="pa-8">
       <!-- Başlık -->
       <v-col cols="12" class="text-center mb-8 pt-12">
@@ -20,7 +20,7 @@
 
       <!-- Kart 1 -->
       <v-col cols="12" md="10" lg="8" class="mb-6" >
-        <v-card hover style="min-height: 35vh; width: 100%;">
+        <v-card hover style="min-height: 35vh; width: 100%; ">
           <v-card-text class="text-left">
             <v-row>
               <v-col cols="12" md="6">

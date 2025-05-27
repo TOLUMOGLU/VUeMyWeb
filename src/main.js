@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import vuetify from './plugins/vuetify'
+import router from './router'
 
 import './style.css'
 import '@mdi/font/css/materialdesignicons.css'
@@ -17,4 +18,5 @@ const app = createApp(App)
 app.component('font-awesome-icon', FontAwesomeIcon)
 
 app.use(vuetify)
+app.use(router)
 app.mount('#app')
