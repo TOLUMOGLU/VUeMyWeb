@@ -22,11 +22,12 @@
             <div class="text-subtitle2 font-weight-medium mb-1">Write</div>
             <div class="text-body-2">
               <a href="mailto:info@mysite.com" class="text-blue-darken-2">info@mysite.com</a>
+
             </div>
           </div>
 
           <div class="text-center">
-            <div class="text-subtitle2 font-weight-medium mb-1">Follow</div>
+            <!--<div class="text-subtitle2 font-weight-medium mb-1">Follow</div>-->
             <div class="d-flex justify-center" style="gap: 2px;">
               <v-btn icon variant="text" href="https://www.linkedin.com/in/azime-tolumo%C4%9Flu/" target="_blank" rel="noopener">
                 <font-awesome-icon :icon="['fab', 'linkedin']" />
