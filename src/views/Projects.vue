@@ -10,7 +10,7 @@
         </p>
       </v-col>
       <v-col
-        v-for="(project, index) in projectList"
+        v-for="(project, index) in store.projects"
         :key="'project-' + index"
         cols="12" md="10" lg="8"
         class="mb-8 mb-md-12 mb-lg-16">
@@ -20,7 +20,7 @@
               <v-col cols="12" md="6" class="pa-6 text-left">
                 <h3 class="text-h6 font-weight-bold mb-2" style="color: #F97316;">{{ project.title }}</h3>
                 <div class="text-subtitle-1 font-weight-medium mb-1" style="color: #3f51b5;">
-                  {{ project.role }}
+                  {{ project.category }}
                 </div>
                 <p style="color: #444; font-size: 0.95rem; line-height: 1.5;">
                   {{ project.description }}
@@ -43,24 +43,13 @@
 </template>
 
 <script setup>
-const projectList = [
-  {
-    title: 'Project name 01',
-    role: 'Role Title',
-    description: `I'm a paragraph. Click here to add your own text and edit me. It’s easy.`,
-    image: 'https://avatars.mds.yandex.net/i?id=2a00000179f5ece0391cd85e6c09c8dfb4fb-4914134-images-thumbs&n=13',
-  },
-  {
-    title: 'Project name 02',
-    role: 'Role Title',
-    description: `Another great project with a short explanation of your role and outcome.`,
-    image: 'https://avatars.mds.yandex.net/i?id=2a00000179f5ece0391cd85e6c09c8dfb4fb-4914134-images-thumbs&n=13',
-  },
-  {
-    title: 'Project name 03',
-    role: 'Role Title',
-    description: `You can share what tech you used, what you learned, and how it impacted your skills.`,
-    image: 'https://avatars.mds.yandex.net/i?id=2a00000179f5ece0391cd85e6c09c8dfb4fb-4914134-images-thumbs&n=13',
-  },
-];
+import { onMounted } from 'vue'
+import { useProjectStore } from '../stores/projectStore'
+
+const store = useProjectStore()
+
+onMounted(async () => {
+  await store.fetchProjects()
+})
+
 </script>

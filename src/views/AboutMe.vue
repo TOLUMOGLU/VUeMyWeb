@@ -112,7 +112,7 @@
             style="gap: 16px;">
             
             <v-btn
-              href="#resume"
+              to="/resume"
               rounded
               class="mx-2 hover-white"
               style="min-width: 120px;"
@@ -123,7 +123,7 @@
             </v-btn>
 
             <v-btn
-              href="#projects"
+              to="/projects"
               rounded
               class="mx-2 hover-orange"
               style="min-width: 120px;"
