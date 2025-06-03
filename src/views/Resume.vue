@@ -75,8 +75,8 @@
                    {{ formatDate(edu.startDate) }} - {{ edu.endDate ? formatDate(edu.endDate) : 'Present' }}
                 </h3>
                 <div class="text-subtitle-1 font-weight-medium mb-1" style="color: #3f51b5;">{{ edu.degree }}</div>
-                <div class="text-subtitle-2 mb-1" style="color: #555;">{{ edu.institution }}</div>
-                <div class="text-subtitle-2" style="color: #888;">{{ edu.location }}</div>
+                <div class="text-subtitle-2 mb-1" style="color: #555;">{{ edu.schoolName }}</div>
+                <div class="text-subtitle-2" style="color: #888;">{{ edu.fieldOfStudy }}</div>
               </v-col>
               <v-col cols="12" md="6" class="d-flex align-center text-left">
                 <p class="ma-0" style="color: #444; font-size: 0.95rem; line-height: 1.5;">{{ edu.description }}</p>
@@ -93,18 +93,18 @@
               <v-col cols="12" md="6" class="text-left">
                 <h3 class="text-h6 font-weight-bold mb-2" style="color: #F97316;">Professional Skillset</h3>
                 <ul style="padding-left: 1rem; color: #444; font-size: 0.95rem; line-height: 1.6;">
-                  <li v-for="skill in store3.skillsets" :key="skill.id">
+                  <li v-for="skill in store3.skillset" :key="skill.id">
                     <strong>{{ skill.title }}</strong> - {{ skill.subtitle }}<br>
-                    <small>{{ skill.description }}</small>
+                    <small>{{ skill.title }}</small>
                   </li>
                 </ul>
               </v-col>
               <v-col cols="12" md="6" class="text-left">
                 <h3 class="text-h6 font-weight-bold mb-2" style="color: #F97316;">Soft Skills</h3>
                 <ul style="padding-left: 1rem; color: #444; font-size: 0.95rem; line-height: 1.6;">
-                   <li v-for="skill in store3.skillsets" :key="skill.id">
+                   <li v-for="skill in store3.skillset" :key="skill.id">
                     <strong>{{ skill.title }}</strong> - {{ skill.subtitle }}<br>
-                    <small>{{ skill.description }}</small>
+                    <small>{{ skill.title }}</small>
                   </li>
                 </ul>
               </v-col>

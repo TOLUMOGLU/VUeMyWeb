@@ -20,7 +20,7 @@
               <v-col cols="12" md="6" class="pa-6 text-left">
                 <h3 class="text-h6 font-weight-bold mb-2" style="color: #F97316;">{{ project.title }}</h3>
                 <div class="text-subtitle-1 font-weight-medium mb-1" style="color: #3f51b5;">
-                  {{ project.role }}
+                  {{ project.category }}
                 </div>
                 <p style="color: #444; font-size: 0.95rem; line-height: 1.5;">
                   {{ project.description }}
