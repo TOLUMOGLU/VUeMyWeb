@@ -140,14 +140,6 @@ function changeIcon() {
   iconIndex.value = (iconIndex.value + 1) % icons.length
 }
 
-async function submit() {
-  const isValid = await v$.value.$validate()
-  if (isValid) {
-    alert('Form is valid! Gönderim yapılabilir.')
-  } else {
-    alert('Formda hatalar var, lütfen düzeltin.')
-  }
-}
 </script>
 
 <style scoped>

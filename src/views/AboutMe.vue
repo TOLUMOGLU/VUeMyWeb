@@ -26,13 +26,13 @@
             <div
               v-if="show"
               class="text-center text-white pa-2 pa-md-6">
-              <h1 class="pa-2 text-h4 font-weight-bold">Azime</h1>
-              <h1 class="pa-2 text-h4 font-weight-bold">Tolumoğlu</h1>
+              <h1 class="pa-2 text-h4 font-weight-bold">{{ aboutData.name }}</h1>  
+              <h1 class="pa-2 text-h4 font-weight-bold">{{ aboutData.surname }}</h1>
               <div style="margin-top: 0.5em;"></div>
               <h1
                 class="pa-2 text-h6 font-weight-medium"
                 style="color: #F97316; margin-bottom: 10%; margin-top: 0;">
-                SOFTWARE ENGINEER
+                {{ aboutData.title }}
               </h1>
             </div>
           </transition>
@@ -139,13 +139,7 @@
           <div class="pa-3" v-if="show">
             <p
               class="text-white"
-              style="max-width: 600px; font-size: 1.25rem; line-height: 1.8;">
-              I'm a paragraph. Click here to add your own text and edit me.
-              It’s easy. Just click “Edit Text” or double click me to add your
-              own content and make changes to the font. I’m a great place for
-              you to tell a story and let your users know a little more about
-              you.
-            </p>
+              style="max-width: 600px; font-size: 1.25rem; line-height: 1.8;">{{ aboutData.description }}</p>
           </div>
         </transition>
       </v-col>
@@ -154,17 +148,31 @@
     </v-col>
   </v-container>
 </template>
-<script>
-export default {
-  data() {
-  return {
-    show: false
-  };
-},
-  mounted() {
-    this.show = true;
-  },
-};
+
+<script setup>
+import { ref, onMounted } from 'vue'
+import { useAboutStore } from '@/stores/aboutmeStore'
+
+const show = ref(false)
+const store = useAboutStore()
+const aboutData = ref(null)  
+
+async function loadData() {
+  await store.fetchAbouts()
+  console.log('abouts:', store.abouts)
+
+  const about = store.abouts.find(a => a.aboutMeId === 8) || store.abouts[0]
+
+  if (about) {
+    aboutData.value = about
+    console.log('aboutData:', aboutData.value)
+  }
+}
+
+onMounted(async () => {
+  await loadData()
+  show.value = true
+})
 </script>
 
 <style scoped>
