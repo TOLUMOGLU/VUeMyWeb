@@ -3,7 +3,7 @@ import * as skillsetService from '@/services/skillsetService';
 
 export const useSkillsetStore = defineStore('skillset', {
   state: () => ({
-    skillset: null,
+    skillset: [],
     isLoading: false,
     error: null,
   }),
